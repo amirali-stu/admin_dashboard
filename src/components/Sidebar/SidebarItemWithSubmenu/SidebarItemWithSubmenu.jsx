@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function SidebarItemWithSubmenu({ title, icons, subItems }) {
   return (
@@ -16,8 +16,8 @@ function SidebarItemWithSubmenu({ title, icons, subItems }) {
               key={index}
               to={item.path}
               className={({ isActive }) =>
-                `flex items-center gap-x-1 px-2 py-2 rounded-xl transition-all cursor-pointer ${
-                  isActive ? "bg-indigo-100/60 font-medium" : "font-medium"
+                `flex items-center gap-x-1 px-2 py-2 rounded-xl transition-all cursor-pointer font-medium hover:bg-indigo-100 ${
+                  isActive ? "bg-indigo-100/60" : ""
                 }`
               }
             >
