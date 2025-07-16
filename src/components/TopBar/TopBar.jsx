@@ -19,7 +19,7 @@ function TopBar({ isOpen, setIsOpen }) {
           DashBord Admin
         </span>
       </div>
-      <div className="flex items-center gap-x-2 max-sm:hidden">
+      <div className="flex items-center gap-x-2 max-md:hidden">
         <div
           data-tooltip-id="my-tooltip"
           data-tooltip-content="Notification"
@@ -56,7 +56,7 @@ function TopBar({ isOpen, setIsOpen }) {
         />
       </div>
       <div
-        className="hidden max-sm:block text-indigo-700"
+        className="hidden max-md:block text-indigo-700"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         {isOpen ? <MenuIcon /> : <CloseIcon />}

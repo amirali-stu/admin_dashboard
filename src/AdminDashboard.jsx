@@ -37,13 +37,13 @@ function AdminDashboard() {
     <div className="relative min-h-screen">
       <TopBar isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <div className="grid w-full min-h-[calc(100vh-64px)] md:grid-cols-[256px_1fr] sm:grid-cols-[200px_1fr] max-sm:grid-cols-[0_1fr]">
+      <div className="grid w-full min-h-[calc(100vh-64px)] md:grid-cols-[256px_1fr] max-md:grid-cols-[0.5_1fr]">
         <Sidebar isOpen={isOpen} />
         {router}
       </div>
 
       {/* انیمیشن سایه مشکی */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         <motion.div
           key="overlay"
           initial={{ opacity: 1 }}
@@ -52,7 +52,7 @@ function AdminDashboard() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="absolute inset-0 bg-black z-50"
         />
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 }

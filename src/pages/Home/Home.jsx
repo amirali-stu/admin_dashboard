@@ -1,6 +1,6 @@
 import React from "react";
 import Feature from "../../components/Features/Feature";
-import FeatureData from "../../components/Features/FeatureData";
+import { FeatureData } from "../../components/Datas/Datas";
 import ChartBox from "../../components/Chart/ChartBox";
 
 function Home() {
@@ -18,7 +18,7 @@ function Home() {
         })}
       </div>
 
-      <ChartBox title="Month Sale" dataGrid />
+      <ChartBox title="Chart" />
     </div>
   );
 }
