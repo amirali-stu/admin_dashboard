@@ -5,7 +5,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 function Feature({ title, mony, monyStatus, status, desc, className }) {
   return (
     <div
-      className={`rounded-md p-5 w-full shadow-[0_0_10px_rgba(0,0,0,0.4)] space-y-3 ${className}`}
+      className={`rounded-md p-5 w-full shadow-primer space-y-3 ${className}`}
     >
       <h3 className="text-gray-600 font-medium">{title}</h3>
       <div className="flex items-center">

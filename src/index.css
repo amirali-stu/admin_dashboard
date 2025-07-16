@@ -1,11 +1,57 @@
 @import "tailwindcss";
 
+@theme {
+  --shadow-primer: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
 @layer components {
   .custom-scroll {
     @apply [&::-webkit-scrollbar]:w-2
         [&::-webkit-scrollbar-track]:rounded-full
         [&::-webkit-scrollbar-track]:bg-gray-100
         [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-gray-300
+        [&::-webkit-scrollbar-thumb]:bg-gray-300;
+  }
+
+  .status-select__user select {
+    padding-right: 1.5rem; /* فضای کافی برای فلش */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .status-select__user select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .status-select__user svg {
+    position: absolute;
+    right: 1rem;
+    pointer-events: none; /* فلش رو غیرقابل کلیک می‌کنه */
+  }
+
+  .status-select__user select option {
+    background: white;
+    color: #4b5563; /* متن خاکستری مثل accordion-item */
+    padding: 0.5rem 1rem;
+  }
+
+  .status-select__user select option:hover {
+    background: linear-gradient(to left, #dbeafe, #bfdbfe);
+    color: #1e40af;
+  }
+
+  /* مخفی کردن فلش پیش‌فرض مرورگر */
+  .status-select__user select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* استایل برای متن انتخاب‌شده */
+  .status-select__user select option:checked {
+    background: linear-gradient(to left, #dbeafe, #bfdbfe);
+    color: #1e40af;
   }
 }
