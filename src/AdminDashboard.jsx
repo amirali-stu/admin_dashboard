@@ -8,13 +8,20 @@ import NewUser from "./pages/NewUser/NewUser";
 import TopBar from "./components/TopBar/TopBar";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Loader from "./components/Loader/Loader";
+import { useLocation } from "react-router-dom";
 
 function AdminDashboard() {
   const [isOpen, setIsOpen] = useState(true);
   const [loading, setLoading] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
-
   const [dataDel, setDataDel] = useState("");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // هر وقت مسیر عوض شد، سایدبار رو ببند
+    setIsOpen(true);
+  }, [location.pathname]);
 
   const routes = [
     { path: "/", element: <Home /> },

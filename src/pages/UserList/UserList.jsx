@@ -93,22 +93,26 @@ function UserList({
     },
   ];
 
+  // The datagrid must be responsive.
+
   return (
     <div className="w-[100%] px-4">
-      <Box sx={{ height: 400, width: "100%" }}>
-        <DataGrid
-          rows={userDatas}
-          columns={columns}
-          initialState={{
-            pagination: {
-              paginationModel: {
-                pageSize: 5,
+      <Box sx={{ height: 400, width: "100%", overflowX: "auto" }}>
+        <div style={{ minWidth: 600 }}>
+          <DataGrid
+            rows={userDatas}
+            columns={columns}
+            initialState={{
+              pagination: {
+                paginationModel: {
+                  pageSize: 5,
+                },
               },
-            },
-          }}
-          pageSizeOptions={[2]}
-          disableRowSelectionOnClick
-        />
+            }}
+            pageSizeOptions={[2]}
+            disableRowSelectionOnClick
+          />
+        </div>
       </Box>
       {showAlert && (
         <RTLAlert
