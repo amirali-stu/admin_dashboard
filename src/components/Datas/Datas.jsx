@@ -1,3 +1,4 @@
+import { AtmOutlined } from "@mui/icons-material";
 import { image } from "framer-motion/client";
 
 const chartData = [
@@ -72,5 +73,71 @@ const newUsersRecently = [
     profile: "images/profile/Admin-Profile.png",
   },
 ];
+const latestTransActionData = [
+  {
+    id: 1,
+    username: "Mohammad",
+    date: "2023-01-15",
+    amount: 245,
+    status: "Approved",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 2,
+    username: "Ali",
+    date: "2023-06-22",
+    amount: 378,
+    status: "Pending",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 3,
+    username: "Sara",
+    date: "2024-03-10",
+    amount: 150,
+    status: "Declined",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 4,
+    username: "Hossein",
+    date: "2024-09-05",
+    amount: 890,
+    status: "Approved",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 5,
+    username: "Zahra",
+    date: "2025-02-18",
+    amount: 320,
+    status: "Pending",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 6,
+    username: "Reza",
+    date: "2025-07-01",
+    amount: 500,
+    status: "Approved",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 7,
+    username: "Fatima",
+    date: "2025-07-10",
+    amount: 675,
+    status: "Declined",
+    profile: "images/profile/Admin-Profile.png",
+  },
+  {
+    id: 8,
+    username: "Ehsan",
+    date: "2025-07-16", // امروز
+    amount: 200,
+    status: "Pending",
+    profile: "images/profile/Admin-Profile.png",
+  },
+];
 
-export { chartData, featureData, newUsersRecently };
+export { chartData, featureData, newUsersRecently, latestTransActionData };

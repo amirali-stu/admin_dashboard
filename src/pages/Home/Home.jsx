@@ -3,6 +3,7 @@ import Feature from "../../components/Features/Feature";
 import { featureData } from "../../components/Datas/Datas";
 import ChartBox from "../../components/Chart/ChartBox";
 import NewUsersRecently from "../../components/NewUsersRecently/NewUsersRecently";
+import LatestTransAction from "../../components/LatestTransAction/LatestTransAction";
 
 function Home() {
   return (
@@ -20,8 +21,13 @@ function Home() {
       </div>
 
       <ChartBox title="Chart" />
-      <div>
-        <NewUsersRecently />
+      <div className="grid grid-cols-12 gap-4 mb-6">
+        <div className="xl:col-span-4 max-xl:col-span-12">
+          <NewUsersRecently />
+        </div>
+        <div className="xl:col-span-8 max-xl:col-span-12">
+          <LatestTransAction />
+        </div>
       </div>
     </div>
   );
