@@ -12,11 +12,34 @@ import Loader from "./components/Loader/Loader";
 function AdminDashboard() {
   const [isOpen, setIsOpen] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [showAlert, setShowAlert] = useState(false);
+
+  const [dataDel, setDataDel] = useState("");
 
   const routes = [
     { path: "/", element: <Home /> },
-    { path: "/users", element: <UserList /> },
-    { path: "/products", element: <Products /> },
+    {
+      path: "/users",
+      element: (
+        <UserList
+          showAlert={showAlert}
+          setShowAlert={setShowAlert}
+          dataDel={dataDel}
+          setDataDel={setDataDel}
+        />
+      ),
+    },
+    {
+      path: "/products",
+      element: (
+        <Products
+          showAlert={showAlert}
+          setShowAlert={setShowAlert}
+          dataDel={dataDel}
+          setDataDel={setDataDel}
+        />
+      ),
+    },
     { path: "/new-user", element: <NewUser /> },
   ];
   const router = useRoutes(routes);

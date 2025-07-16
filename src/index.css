@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --shadow-primer: 0 0 8px rgba(0, 0, 0, 0.2);
+  --shadow-primer: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 @layer components {

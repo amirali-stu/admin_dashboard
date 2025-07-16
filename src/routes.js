@@ -6,6 +6,7 @@ import NewUser from "./pages/NewUser/NewUser";
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/users", element: <UserList /> },
+  { path: "/users/:id", element: <UserList /> },
   { path: "/products", element: <Products /> },
   { path: "/new-user", element: <NewUser /> },
 ];
