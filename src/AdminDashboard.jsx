@@ -3,7 +3,9 @@ import { useRoutes } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Home from "./pages/Home/Home";
 import UserList from "./pages/UserList/UserList";
+import User from "./pages/User/User";
 import Products from "./pages/Products/Products";
+import Product from "./pages/Product/Product";
 import NewUser from "./pages/NewUser/NewUser";
 import TopBar from "./components/TopBar/TopBar";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -47,7 +49,12 @@ function AdminDashboard() {
         />
       ),
     },
-    { path: "/new-user", element: <NewUser /> },
+    {
+      path: "/new-user",
+      element: <NewUser showAlert={showAlert} setShowAlert={setShowAlert} />,
+    },
+    { path: "/product/:productID", element: <Product /> },
+    { path: "/user/:userID", element: <User /> },
   ];
   const router = useRoutes(routes);
 

@@ -74,7 +74,7 @@ function Products({
               <DeleteIcon variant="outlined" color="error" />
             </div>
 
-            <Link to={`/user/${params.row.id}`}>
+            <Link to={`/product/${params.row.id}`}>
               <Button
                 variant="outlined"
                 color="warning"
